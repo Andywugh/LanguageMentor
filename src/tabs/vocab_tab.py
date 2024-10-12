@@ -1,8 +1,8 @@
 # tabs/vocab_tab.py
 
 import gradio as gr
-from agents.vocab_agent import VocabAgent
-from utils.logger import LOG
+from src.agents.vocab_agent import VocabAgent
+from src.utils.logger import LOG
 
 # 初始化词汇代理，负责管理词汇学习会话
 vocab_agent = VocabAgent()
@@ -38,7 +38,7 @@ def restart_vocab_study_chatbot():
 
 # 处理用户输入的单词学习消息，并与词汇代理互动获取机器人的响应
 def handle_vocab(user_input, chat_history):
-    bot_message = vocab_agent.chat_with_history(user_input)  # 获取机器回复
+    bot_message = vocab_agent.chat_with_history(user_input)  # 获取机回复
     LOG.info(f"[Vocab ChatBot]: {bot_message}")  # 记录机器人回应信息
     return bot_message
 

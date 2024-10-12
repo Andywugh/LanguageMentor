@@ -1,8 +1,8 @@
 import gradio as gr
-from tabs.scenario_tab import create_scenario_tab
-from tabs.conversation_tab import create_conversation_tab
-from tabs.vocab_tab import create_vocab_tab
-from utils.logger import LOG
+from src.tabs.scenario_tab import create_scenario_tab
+from src.tabs.conversation_tab import create_conversation_tab
+from src.tabs.vocab_tab import create_vocab_tab
+from src.utils.logger import LOG
 
 def main():
     with gr.Blocks(title="LanguageMentor 英语私教") as language_mentor_app:
